@@ -1,0 +1,107 @@
+# REQUERIMIENTOS DEL SISTEMA
+## Aplicación para Organización de Documentos Estudiantiles
+
+### 1. REQUERIMIENTOS DE PLATAFORMA
+- El programa debe funcionar en local, específicamente en sistemas Windows y Linux
+- **Aplicación de escritorio completamente offline**: No requiere conexión a internet
+- **Base de datos local**: Todos los datos se almacenan localmente en la PC del usuario
+- **Sin dependencias de red**: El sistema funciona independientemente de la conectividad
+- **Tecnología**: Aplicación de escritorio usando Electron + React para máxima compatibilidad
+
+### 2. PROPÓSITO DEL SISTEMA
+- El programa está diseñado para organizar documentos de estudiantes universitarios
+- Dirigido a estudiantes que están cursando una carrera universitaria
+- Enfocado en solucionar la desorganización académica con herramientas más completas que las agendas básicas existentes
+
+### 3. CONTEXTO DE USO
+- Los estudiantes reciben planificaciones semestrales con todas las actividades por materia
+- Típicamente cursan 6 materias por semestre, pero el sistema debe ser adaptable a más materias
+- Debe ser útil para estudiantes en cualquier nivel de la carrera (semestres avanzados)
+
+### 4. FUNCIONALIDADES PRINCIPALES
+
+#### 4.1 Sistema de Perfil de Usuario
+El estudiante debe poder crear un perfil completo que incluya:
+- **Nombre completo**
+- **Foto de perfil**
+- **Fecha de nacimiento** (para calcular edad exacta con meses y días)
+- **Carrera que está cursando**
+- **Universidad**
+- **Correo institucional**
+- **Matrícula de estudiante**
+- **Información adicional relevante**
+
+**Sección de Evaluación de Eficiencia:**
+- **Sistema de puntaje de eficiencia** (escala del 1 al 100)
+- **Métrica de cumplimiento**: evaluación basada en puntualidad de entregas
+- **Seguimiento del desempeño**: análisis de patrones de entrega vs fechas límite
+- **Objetivo**: motivar y mejorar los hábitos de organización del estudiante
+
+#### 4.2 Panel de Administración de Tareas (Agenda)
+- **Selector de semestre** en la parte superior del panel
+- Debe permitir navegación entre diferentes semestres
+- Adaptable para estudiantes en cualquier nivel de la carrera
+
+#### 4.3 Sistema de Gestión de Materias
+Cada materia debe tener una ficha completa con:
+- **Nombre de la materia**
+- **Nombre del profesor**
+- **Grupo asignado**
+- **Correo del profesor**
+- **Sección de documentos**: capacidad para subir PDFs con:
+  * Planificaciones del semestre
+  * Material de apoyo proporcionado por el profesor
+  * Otros documentos relevantes
+
+#### 4.4 Sistema de Gestión de Tareas
+Cada tarea debe contener:
+- **Fecha límite de entrega** (con hora exacta)
+- **Nombre de la tarea**
+- **Nivel de importancia** con 3 opciones:
+  * Bajo
+  * Medio
+  * Alto
+- **Sección de material de apoyo**: para agregar PDFs específicos de la tarea
+- **Descripción general** de la tarea
+- **Checklist de actividades**: sección para crear una lista de verificación de las actividades a realizar para completar la tarea
+- **Vinculación con la materia** correspondiente
+
+#### 4.5 Sistema de Calendario con Filtros
+- **Vista de calendario** donde aparecen todas las tareas registradas
+- **Filtros disponibles**:
+  * Por materia
+  * Por nivel de importancia (Alto, Medio, Bajo)
+  * Por días disponibles para entrega
+  * Por horas disponibles para entrega
+- **Navegación directa**: al seleccionar una tarea del calendario debe redirigir al panel de ejecución
+
+#### 4.6 Panel de Ejecución de Tareas
+- **Checklist interactivo**: visualización del checklist de pasos para completar la tarea específica
+- **Material de apoyo disponible**: acceso directo a todos los PDFs previamente agregados para esa tarea
+- **Progreso del checklist**: el usuario puede marcar/desmarcar elementos del checklist
+- **Subida de trabajo completado**: una vez completado el checklist, permitir subir el archivo final de la tarea en formatos:
+  * .ppt / .pptx
+  * .pdf
+  * .docx
+  * Otros formatos relevantes
+- **Marcado de tarea completada**: opción para marcar la tarea como terminada
+- **Objetivo**: generar base de datos de tareas realizadas
+
+#### 4.7 Dashboard Principal Mejorado
+- **Métricas de progreso**:
+  * Cantidad de tareas pendientes
+  * Cantidad de tareas completadas
+  * Cantidad de tareas en proceso
+- **Sección de próximas tareas por materia**:
+  * Mostrar la siguiente tarea más próxima de cada materia
+  * Organización por nivel de importancia (Alto → Medio → Bajo)
+  * Cada tarea debe incluir botón de acceso directo al panel de ejecución
+- **Vista rápida del estado general** de las actividades académicas
+
+#### 4.8 Sistema de Gestión de Documentos
+- Biblioteca personal de trabajos académicos del estudiante
+- Organización por materia y tipo de documento
+- Capacidad de subir documentos generados por el estudiante
+
+---
+*Documento de requerimientos - Fecha: 2 de agosto de 2025*
